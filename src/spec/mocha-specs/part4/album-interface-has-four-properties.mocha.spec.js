@@ -12,6 +12,7 @@ describe('Album Interface', function () {
     }
     let re = /export\s+interface\s+Album\s*\{\s*([\w\s\:\;\[\]]+)\s*\}/
     let match = file.match(re);
+    console.log(match);
     assert(Array.isArray(match) && match != null, "There's an `album.ts` file, but it doesn't export an interface named `Album`.");
     
     let arr = match[1].split('\n');
